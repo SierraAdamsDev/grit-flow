@@ -144,11 +144,11 @@ body{
 /* ===== Utilities ===== */
 .u-hidden{ display:none !important; }
 
-/* ===== Mobile polish ===== */
+/* ===== Mobile polish ===== 
 @media (max-width: 640px){
   .site-header{ padding:10px 14px; }
   .brand{ justify-content:center; }
-  .wordmark{ font-size:1rem; } /* was 1.1rem */
+  .wordmark{ font-size:1rem; } /* was 1.1rem 
   .nav.open{
     gap:.4rem;
     padding:12px 14px;
@@ -184,6 +184,7 @@ body{
     gap:6px;
   }
 }
+*/
 
 /* Contact section mobile polish */
 @media (max-width: 640px){
