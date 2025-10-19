@@ -144,11 +144,11 @@ body{
 /* ===== Utilities ===== */
 .u-hidden{ display:none !important; }
 
-/* ===== Mobile polish ===== 
+ ===== Mobile polish ===== 
 @media (max-width: 640px){
   .site-header{ padding:10px 14px; }
   .brand{ justify-content:center; }
-  .wordmark{ font-size:1rem; } /* was 1.1rem 
+  .wordmark{ font-size:1rem; } was 1.1rem 
   .nav.open{
     gap:.4rem;
     padding:12px 14px;
@@ -184,7 +184,7 @@ body{
     gap:6px;
   }
 }
-*/
+
 
 /* Contact section mobile polish */
 @media (max-width: 640px){
@@ -216,4 +216,24 @@ img, svg, video{ max-width:100%; height:auto; }
 /* Hide header CTA on small screens */
 @media (max-width: 640px){
   .nav .cta { display: none !important; }
+}
+
+/* Desktop: keep a single card centered and not super wide */
+@media (min-width: 900px){
+  /* hard cap the card width and center it */
+  .apps .card{
+    max-width: 720px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Progressive enhancement: if the grid has only ONE card, make the grid itself that width */
+@supports selector(.apps .grid:has(.card)){
+  @media (min-width: 900px){
+    .apps .grid:has(.card:only-child){
+      grid-template-columns: minmax(0, 720px);
+      justify-content: center;
+    }
+  }
 }
