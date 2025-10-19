@@ -185,6 +185,23 @@ body{
   }
 }
 
+/* Contact section mobile polish */
+@media (max-width: 640px){
+  .contact .contact-cta{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;              /* more space between buttons */
+    margin-top: 12px;
+  }
+
+  .contact .btn{
+    width: 100%;
+    max-width: 520px;
+    align-self: stretch;    /* make both equal width */
+  }
+}
+
+
 /* Very small devices */
 @media (max-width: 380px){
   .wordmark{ font-size:.96rem; }
@@ -195,4 +212,10 @@ body{
 /* Make media scale safely if you add images/video later */
 img, svg, video{ max-width:100%; height:auto; }
 
+/* Temporarily hide Project #2 */
+.card.project-2 { display: none !important; }
 
+/* Hide header CTA on small screens */
+@media (max-width: 640px){
+  .nav .cta { display: none !important; }
+}
