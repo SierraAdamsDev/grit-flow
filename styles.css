@@ -213,9 +213,6 @@ body{
 /* Make media scale safely if you add images/video later */
 img, svg, video{ max-width:100%; height:auto; }
 
-/* Temporarily hide Project #2 */
-.card.project-2 { display: none !important; }
-
 /* Hide header CTA on small screens */
 @media (max-width: 640px){
   .nav .cta { display: none !important; }
