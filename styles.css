@@ -141,7 +141,58 @@ body{
   }
 }
 
-/* ===== Accessibility niceties ===== */
-@media (prefers-reduced-motion: reduce){
-  .btn, .nav a, .nav .cta{transition:none}
+/* ===== Utilities ===== */
+.u-hidden{ display:none !important; }
+
+/* ===== Mobile polish ===== */
+@media (max-width: 640px){
+  .site-header{ padding:10px 14px; }
+  .brand{ justify-content:center; }
+  .wordmark{ font-size:1rem; } /* was 1.1rem */
+  .nav.open{
+    gap:.4rem;
+    padding:12px 14px;
+  }
+
+  .hero{ padding:72px 16px 40px; text-align:center; }
+  .hero h1{ font-size:clamp(24px, 6vw, 32px); }
+  .tagline{ margin-bottom:16px; }
+
+  .actions{ gap:10px; }
+  .actions .btn{
+    width:100%;
+    max-width:420px;
+    padding:14px 16px;
+  }
+
+  .section{ padding:48px 16px; }
+  .container{ max-width:720px; }
+
+  .apps .grid{ grid-template-columns:1fr; }
+  .card{ padding:16px; }
+
+  .pill-list{ gap:8px; }
+  .pill-list li{ padding:9px 12px; }
+
+  .contact .contact-cta{
+    display:flex; flex-direction:column; gap:10px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
 }
+
+/* Very small devices */
+@media (max-width: 380px){
+  .wordmark{ font-size:.96rem; }
+  .nav.open{ padding:10px 12px; }
+  .btn{ padding:12px 14px; }
+}
+
+/* Make media scale safely if you add images/video later */
+img, svg, video{ max-width:100%; height:auto; }
+
+
