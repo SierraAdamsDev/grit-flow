@@ -7,7 +7,7 @@
   --text:#222;
   --muted:#646464;
   --radius:16px;
-  --shadow:0 8px 30px rgba(0,0,0,0.12);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 *{box-sizing:border-box}
@@ -144,11 +144,11 @@ body{
 /* ===== Utilities ===== */
 .u-hidden{ display:none !important; }
 
- ===== Mobile polish ===== 
+ /*===== Mobile polish =====*/ 
 @media (max-width: 640px){
   .site-header{ padding:10px 14px; }
   .brand{ justify-content:center; }
-  .wordmark{ font-size:1rem; } was 1.1rem 
+  .wordmark{ font-size:1rem; }  
   .nav.open{
     gap:.4rem;
     padding:12px 14px;
@@ -271,5 +271,152 @@ img, svg, video{ max-width:100%; height:auto; }
   .pill-list li:nth-child(3){
     background:#f8f8f8;
     font-weight:600;
+  }
+}
+
+/*Desktop*/
+/* Section variants */
+.alt-section{
+  background: linear-gradient(180deg, #ffffff, #f8f8f6);
+}
+
+.section-intro{
+  max-width: 760px;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+/* Better desktop layout */
+.launches-grid,
+.projects-grid{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+}
+
+/* Card sizing */
+.apps .card{
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/* Desktop refinement for wider screens */
+@media (min-width: 1200px){
+  .container{
+    max-width: 1200px;
+  }
+
+  .hero-inner{
+    max-width: 1200px;
+  }
+
+  .hero h1{
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .launches-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .apps .card{
+    padding: 22px;
+  }
+}
+
+/* Even larger desktop screens */
+@media (min-width: 1440px){
+  .container{
+    max-width: 1280px;
+  }
+
+  .hero{
+    padding-top: 110px;
+    padding-bottom: 64px;
+  }
+
+  .section{
+    padding: 72px 24px;
+  }
+}
+
+/* Social link styling in nav */
+.nav .social-link{
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+}
+
+.nav .social-link:hover{
+  background: rgba(255,255,255,0.08);
+}
+
+/* Contact buttons spacing */
+.contact-cta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* Mobile contact stack */
+@media (max-width: 640px){
+  .contact-cta{
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact .btn{
+    width: 100%;
+  }
+}
+
+/*Nav Icon*/
+.nav-socials{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-socials a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.nav-socials a:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.nav-socials a{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-socials a:hover{
+  background: rgba(255,255,255,0.15);
+}
+
+@media (max-width:640px){
+  .nav-socials{
+    gap: 10px;
+  }
+
+  .nav-socials a{
+    width: 34px;
+    height: 34px;
   }
 }
