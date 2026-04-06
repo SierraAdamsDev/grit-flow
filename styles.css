@@ -86,7 +86,17 @@ body{
 .section{padding:64px 20px}
 .container{max-width:1100px; margin:0 auto}
 .section h2{font-size:clamp(22px, 3vw, 32px); margin:0 0 18px}
-.section p{color:#333; max-width:72ch}
+.section p{color:#333;}
+
+.about p{
+  max-width: 900px;
+}
+.section-intro{
+  max-width: 760px;
+}
+.card p{
+  max-width: none;
+}
 
 .about p em{font-style:normal; font-weight:700; color:var(--charcoal)}
 
@@ -419,4 +429,96 @@ img, svg, video{ max-width:100%; height:auto; }
     width: 34px;
     height: 34px;
   }
+}
+
+/* ===== Desktop tightening ===== */
+@media (min-width: 900px){
+  .hero{
+    padding: 72px 24px 40px;
+  }
+
+  .hero-inner{
+    max-width: 980px;
+  }
+
+  .hero h1{
+    margin-bottom: 12px;
+  }
+
+  .tagline{
+    margin-bottom: 14px;
+  }
+
+  .section{
+    padding: 48px 24px;
+  }
+
+  .container{
+    max-width: 1120px;
+  }
+
+  /* About section should use the space better */
+  .about .container{
+    max-width: 1120px;
+    display: block;
+  }
+
+  .about p{
+    max-width: 900px;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+}
+
+@media (min-width: 900px){
+  .launches-grid,
+  .projects-grid{
+    gap: 20px;
+  }
+
+  .apps .card{
+    padding: 20px;
+  }
+}
+
+.launches-grid .card,
+.projects-grid .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* KEY FIX */
+  padding: 18px;
+}
+
+/* tighten spacing inside */
+.launches-grid .card h3,
+.projects-grid .card h3{
+  margin-bottom: 6px;
+}
+
+.launches-grid .card p,
+.projects-grid .card p{
+  margin: 8px 0 12px;
+  line-height: 1.5;
+}
+
+/* keep buttons consistent */
+.store-buttons{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card-badge{
+  align-self: flex-start;
+}
+
+/* Active buttons (for live products like BuildLog) */
+.store.active{
+  background: var(--gold);
+  color: #1a1a1a;
+  border: none;
+}
+
+.store.active:hover{
+  filter: brightness(0.95);
 }
