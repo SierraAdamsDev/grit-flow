@@ -615,6 +615,8 @@ p{
   }
 }
 
+
+
 /* Values */
 .values{
   background:var(--soft);
@@ -688,6 +690,54 @@ p{
 
 .footer-tag{
   color:var(--cream) !important;
+}
+
+/*back to top*/
+.back-to-top{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+
+  width:48px;
+  height:48px;
+
+  border:none;
+  border-radius:50%;
+
+  background:var(--gold);
+  color:#111;
+
+  font-size:1.25rem;
+  font-weight:700;
+
+  cursor:pointer;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:all .25s ease;
+
+  z-index:999;
+}
+
+.back-to-top.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.back-to-top:hover{
+  transform:translateY(-2px);
+}
+
+@media (max-width:640px){
+  .back-to-top{
+    right:16px;
+    bottom:16px;
+    width:44px;
+    height:44px;
+  }
 }
 
 /* Motion */
