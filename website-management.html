@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Website Management | Grit & Flow Labs</title>
+
+  <meta
+    name="description"
+    content="Website management and content update support from Grit & Flow Labs for small businesses, creators, and growing brands."
+  />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="theme-color" content="#1E1E1E" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Grit & Flow Labs home">
+      <span class="wordmark">
+        <strong>GRIT</strong>
+        <span class="amp">&amp;</span>
+        <span class="flow">FLOW</span>
+        <span class="labs">Labs</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">
+      Menu
+    </button>
+
+    <nav id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#docready">DocReady</a>
+      <a href="tools.html">Free Tools</a>
+      <a href="website-management.html">Website Management</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero small-hero management-hero">
+      <div class="container">
+        <p class="eyebrow">Website Management</p>
+
+        <h1>
+          Keep your website current without making it a second job.
+        </h1>
+
+        <p class="hero-text">
+          Ongoing website support for small businesses, creators, and brands that
+          need content updates, light maintenance, and a simple way to request changes.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-gold" href="#plans">View Plans</a>
+          <a class="btn btn-ghost" href="#update-request">Submit Updates</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section management-intro">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">What This Covers</p>
+          <h2>Simple website support for people who have enough to do.</h2>
+        </div>
+
+        <p>
+          Website Management is built for clients who already have a website and
+          need help keeping it updated. Send content changes, small edits, page updates,
+          and routine requests through one clean form instead of scattered texts,
+          emails, or last-minute chaos.
+        </p>
+      </div>
+    </section>
+
+    <section id="plans" class="section plans-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Plans</p>
+          <h2>Choose the level of support that fits your site.</h2>
+          <p>
+            Pricing is intentionally simple. If your request is outside the scope of a plan,
+            I’ll let you know before any extra work is done.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="price-label">One-Time Update</p>
+            <h3>Starting at $25</h3>
+            <p>
+              Best for quick edits without an ongoing plan.
+            </p>
+            <ul>
+              <li>Small text changes</li>
+              <li>Image swaps</li>
+              <li>Link updates</li>
+              <li>Minor content edits</li>
+            </ul>
+            <a class="btn btn-ghost" href="#update-request">Submit Request</a>
+          </article>
+
+          <article class="price-card featured-price">
+            <p class="price-label">Basic Monthly</p>
+            <h3>$49/month</h3>
+            <p>
+              Best for clients who need regular light updates and routine support.
+            </p>
+            <ul>
+              <li>Monthly content updates</li>
+              <li>Minor page edits</li>
+              <li>Basic link and content checks</li>
+              <li>Priority over one-time requests</li>
+            </ul>
+            <a class="btn btn-gold" href="#update-request">Start Monthly Support</a>
+          </article>
+
+          <article class="price-card">
+            <p class="price-label">Annual Management</p>
+            <h3>$499/year</h3>
+            <p>
+              Best for clients who want ongoing support at a lower yearly rate.
+            </p>
+            <ul>
+              <li>Same support as monthly</li>
+              <li>Lower annual cost</li>
+              <li>Simple yearly renewal</li>
+              <li>Consistent website upkeep</li>
+            </ul>
+            <a class="btn btn-ghost" href="#update-request">Ask About Annual</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="update-request" class="section update-section">
+      <div class="container update-card">
+        <div>
+          <p class="eyebrow">Client Updates</p>
+          <h2>Submit website changes in one place.</h2>
+          <p>
+            Use this form to send website updates, content edits, new copy, images,
+            links, deadlines, or notes. The clearer the request, the faster it can be completed.
+          </p>
+        </div>
+
+        <form name="website-update" method="POST" data-netlify="true" class="update-form">
+          <input type="hidden" name="form-name" value="website-update" />
+
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            Business / Website Name
+            <input type="text" name="business-name" required />
+          </label>
+
+          <label>
+            Website URL
+            <input type="url" name="website-url" placeholder="https://example.com" />
+          </label>
+
+          <label>
+            Type of Update
+            <select name="update-type" required>
+              <option value="">Select one</option>
+              <option value="Text/content update">Text/content update</option>
+              <option value="Image update">Image update</option>
+              <option value="Link update">Link update</option>
+              <option value="New page or section">New page or section</option>
+              <option value="General maintenance">General maintenance</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <label>
+            Priority
+            <select name="priority" required>
+              <option value="">Select one</option>
+              <option value="Normal">Normal</option>
+              <option value="Urgent">Urgent</option>
+              <option value="Not time sensitive">Not time sensitive</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred Deadline
+            <input type="date" name="deadline" />
+          </label>
+
+          <label>
+            Update Details
+            <textarea
+              name="update-details"
+              rows="7"
+              required
+              placeholder="Paste the exact text, describe the change, or include links to images/files."
+            ></textarea>
+          </label>
+
+          <button class="btn btn-gold" type="submit">
+            Submit Website Update
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Grit &amp; Flow Labs. All rights reserved.</p>
+      <p class="footer-tag">Built with grit. Designed for flow.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
